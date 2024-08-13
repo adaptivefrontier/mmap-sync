@@ -14,7 +14,7 @@ use crate::synchronizer::SynchronizerError;
 use crate::synchronizer::SynchronizerError::*;
 
 const STATE_SIZE: usize = mem::size_of::<State>();
-const SLEEP_DURATION: Duration = Duration::from_secs(1);
+const SLEEP_DURATION: Duration = Duration::from_micros(100);
 
 /// State stored in memory for synchronization using atomics
 #[repr(C)]
