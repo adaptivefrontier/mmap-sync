@@ -16,6 +16,7 @@ memmap2 = "0.9.4"
 rkyv = { version = "0.7.40", features = ["validation", "strict"] }
 thiserror = "1.0.30"
 wyhash = "0.5.0"
+log = { version = "0.4.20", features = ["max_level_warn"] }
 
 [dev-dependencies]
 criterion = { version = "0.5.1", features = ["html_reports"] }

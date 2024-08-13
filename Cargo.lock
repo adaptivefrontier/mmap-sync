@@ -590,6 +590,7 @@ version = "1.0.3"
 dependencies = [
  "bytecheck",
  "criterion",
+ "log",
  "memmap2",
  "pprof",
  "proptest",

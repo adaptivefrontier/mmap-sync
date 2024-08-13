@@ -1,3 +1,4 @@
+use log::warn;
 use memmap2::MmapMut;
 use std::ffi::{OsStr, OsString};
 use std::fs::OpenOptions;
@@ -28,6 +29,10 @@ pub(crate) struct State {
 impl State {
     /// Initialize new state with zero values
     pub(crate) fn new() -> State {
+        warn!(
+            "Initializing new state with SLEEP_DURATION {:?}",
+            SLEEP_DURATION
+        );
         State {
             version: AtomicU64::new(0),
             idx_readers: [AtomicU32::new(0), AtomicU32::new(0)],
